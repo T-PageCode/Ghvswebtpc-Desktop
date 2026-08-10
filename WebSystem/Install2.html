@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ghvswebtpc</title>
+    <link rel="icon" href="../SystemLogo.png">
+    <link rel="stylesheet" href="./Style/installpage/install2.css">
+    <script>
+        document.addEventListener("contextmenu",function(NoCtm){
+            NoCtm.preventDefault()
+        })
+        function btn1_z() {
+            let btn1 = document.getElementById("btn1");
+            btn1.style.backgroundColor = "rgb(150,0,255)";
+            btn1.style.color = "white";
+            let btn3 = document.getElementById("btn3");
+            btn3.style.backgroundColor = "rgb(230,230,230)"
+            if (btn1.style.backgroundColor = "rgb(150,0,255)") {
+                btn3.style.backgroundColor = "rgb(142,0,207)";
+                btn3.style.color = "white";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="div_id1">
+        <h1 id="text1">安装Ghvswebtpc</h1>
+        <img src="../SystemLogo.png" alt="系统图标" id="image1">
+        <p id="text2">Ghvswebtpc</p>
+        <h2 id="text3">选择地区</h2>
+        <button id="btn1" onclick="btn1_z();">中华人民共和国</button>
+        <button id="btn2" onclick="window.location.href='./Install1.html'">返回</button>
+        <button id="btn3" onclick="window.location.href='./Install3.html'">下一步</button>
+    </div>
+</body>
+</html>

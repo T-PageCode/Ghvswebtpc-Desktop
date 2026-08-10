@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ghvswebtpc</title>
+    <link rel="icon" href="../SystemLogo.png">
+    <link rel="stylesheet" href="./Style/InterfaceSettings.css">
+    <script>
+        document.addEventListener("contextmenu",function(NoCtm){
+            NoCtm.preventDefault()
+        })
+    </script>
+</head>
+<body>
+    <h1 id="text1">界面</h1>
+    <div class="divClass1" id="div_id2">
+        <h1 class="text2">显示任务栏白色色块</h1>
+        <div class="OnOffBtn" id="OnOffBtn1">
+            <label class="LabelClass1">
+                <input type="checkbox" class="input1" id="input1">
+                <span class="spanClass1"></span>
+            </label>
+        </div>
+    </div>
+    <div class="divClass1" id="div_id3">
+        <h1 class="text2">窗口使用圆角</h1>
+        <div class="OnOffBtn" id="OnOffBtn2">
+            <label class="LabelClass1">
+                <input type="checkbox" class="input1" id="input2">
+                <span class="spanClass1"></span>
+            </label>
+    </div>
+        <h2 id="text3">底部栏&quot;程序与功能&quot;设置</h2>
+    <div class="divClass1" id="div_id4">
+        <h1 id="text4">在程序与功能中点击快捷方式后关闭程序与功能</h1>
+        <div class="OnOffBtn" id="OnOffBtn2">
+            <label class="LabelClass1">
+                <input type="checkbox" class="input1" id="input3">
+                <span class="spanClass1"></span>
+            </label>
+        </div>
+    </div>
+    <script>
+        let input1 = document.getElementById("input1");
+        let input2 = document.getElementById("input2");
+        let input3 = document.getElementById("input3");
+        let LS1 = localStorage.getItem("ShowDBLWhiteDiv");
+        let LS2 = localStorage.getItem("WindowBorderRadius");
+        let LS3 = localStorage.getItem("PAGDivSH");
+        input1.checked = LS1 !== "False";
+        input2.checked = LS2 !== "False";
+        input3.checked = LS3 !== "False";
+        input1.onchange = function () {
+            localStorage.setItem("ShowDBLWhiteDiv", input1.checked ? "True" : "False");
+            setTimeout(() => {
+                top.location.href = "./QHLoad.html";
+            },200)
+        }
+        input2.onchange = function () {
+            localStorage.setItem("WindowBorderRadius", input2.checked ? "True" : "False");
+            setTimeout(() => {
+                top.location.href = "./QHLoad.html";
+            },200)
+        }
+        input3.onchange = function () {
+            localStorage.setItem("PAGDivSH", input3.checked ? "True" : "False");
+            setTimeout(() => {
+                top.location.href = "./QHLoad.html";
+            },200)
+        }
+    </script>
+</body>
+</html>

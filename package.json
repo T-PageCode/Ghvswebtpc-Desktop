@@ -1,0 +1,28 @@
+{
+  "name": "ghvswebtpc-desktop",
+  "version": "1.0.1",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win nsis zip"
+  },
+  "devDependencies": {
+    "electron": "43.2.0",
+    "electron-builder": "^25.1.0"
+  },
+  "build": {
+    "appId": "io.github.t-pagecode.ghvswebtpc-desktop",
+    "productName": "Ghvswebtpc Desktop",
+    "icon": "icon.ico",
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "icon.ico",
+      "uninstallerIcon": "icon.ico",
+      "uninstallDisplayName": "Ghvswebtpc Desktop"
+    }
+  }
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Ghvswebtpc</title>
+    <link rel="icon" href="../SystemLogo.png">
+    <link rel="stylesheet" href="./Style/Desktop.css">
+</head>
+<body>
+    <div id="CRM"></div>
+    <div id="PAndGDiv">
+        <img src="../UserIcon.png" id="UserIcon1">
+        <h1 id="UserName1"></h1>
+        <div id="Program1PAGD" onclick="IfPAGDSHP();GxhShow()">
+            <img src="../GxhImage.png" id="P1PAGDImage">
+            <p id="P1PAGDText">个性化</p>
+        </div>
+    </div>
+    <div id="div_id1">
+        <div id="PAndG" onclick="IfDownDivSH()">
+            <img id="image1" src="../SystemLogo.png" alt="系统图标">
+        </div>
+        <div class="div_class1" onclick="GxhShow()" id="div_id2">
+            <img class="image2" src="../GxhImage.png" alt="个性化">
+        </div>
+        <div class="div_class1" id="div_id3" onclick="BrowserShow()">
+            <img class="image2" src="../BrowserImage.png" alt="Ghtpcbrowser">
+        </div>
+        <div class="div_class1" id="div_id4" onclick="TextEditorShow()">
+            <img id="image2" src="../TextEditorImage.png">
+        </div>
+        <div class="div_class1" id="div_id5" onclick="GhvswebtpcShow()">
+            <p id="pN2">Show</p>
+        </div>
+        <div class="div_class1" id="div_id6" onclick="TerminalShow()">
+            <div id="terminal_icon">>_</div>
+        </div>
+        <div class="div_class1" id="div_id7" onclick="SettingsShow()">
+            <img id="image3" src="../SettingsImage.jpg">
+        </div>
+        <div class="div_class1" id="div_id8" onclick="TpcShow()">
+            <p id="pN4">Tpc</p>
+        </div>
+        <p id="text1">Hello</p>
+        <p id="text2"></p>
+        <p id="text3"></p>
+    </div>
+    <div class="window" id="window1">
+        <div class="window_close" onclick="NoShowGxh()">
+            <p>×</p>
+        </div>
+        <div class="window_max" onclick="windowMax1()">
+            <p>↔</p>
+        </div>
+        <iframe src="./Gxh.html" class="iframe1" sandbox="allow-scripts 
+        allow-top-navigation-by-user-activation allow-same-origin"></iframe>
+    </div>
+    <div class="window" id="window2">
+        <div class="window_close" onclick="NoShowBrowser()">
+            <p>×</p>
+        </div>
+        <div class="window_max" onclick="windowMax2()">
+            <p>↔</p>
+        </div>
+        <iframe src="./Browser.html" class="iframe1" sandbox="allow-scripts 
+        allow-top-navigation-by-user-activation allow-same-origin"></iframe>
+    </div>
+    <div class="window" id="window3">
+        <div class="window_close" onclick="NoShowTextEditor()">
+            <p>×</p>
+        </div>
+        <div class="window_max" onclick="windowMax3()">
+            <p>↔</p>
+        </div>
+        <div class="window_help" onclick="TextEditorHelpShow()">
+            <p>?</p>
+        </div>
+        <iframe src="./TextEditor.html" class="iframe1" sandbox="allow-scripts 
+        allow-top-navigation-by-user-activation allow-same-origin"></iframe>
+    </div>
+    <div class="window" id="window4">
+        <div class="window_close" onclick="NoShowTextEditorHelp()">
+            <p>×</p>
+        </div>
+        <h1 id="h1N1">帮助</h1>
+        <p id="pN1"><span style="font-size: 17.5px">使用说明</span><br>
+        点击屏幕任意处(除非按钮)，输入框会被选中，即可开始编辑。
+        </p>
+    </div>
+    <div class="window" id="window5">
+        <div class="window_close" onclick="NoShowGhvswebtpc()">
+            <p>×</p>
+        </div>
+        <div class="window_max" onclick="windowMax4()">
+            <p>↔</p>
+        </div>
+        <video src="../GhvswebtpcShow.mp4" type="video/mp4" controls preload="auto" id="video1"></video>
+    </div>
+    <div class="window" id="window6">
+        <div class="window_close" onclick="NoShowTerminal()">
+            <p>×</p>
+        </div>
+        <div class="window_max" onclick="windowMax5()">
+            <p>↔</p>
+        </div>
+        <div class="window_help" onclick="TerminalHelpShow()">
+            <p>?</p>
+        </div>
+        <iframe src="./Terminal.html" class="iframe1" sandbox="allow-scripts 
+        allow-top-navigation-by-user-activation allow-same-origin"></iframe>
+    </div>
+    <div class="window" id="window7">
+        <div class="window_close" onclick="NoShowTerminalHelp()">
+            <p>×</p>
+        </div>
+        <h1 id="h1N2">帮助</h1>
+        <p id="pN3"><span style="font-size: 17.5px">说明</span><br>
+        terminal color:white = 切换白色主题<br>
+        terminal color:black = 切换黑色主题<br>
+        clear terminal = 清除输出区<br>
+        hello ghvswebtpc = 介绍Ghvswebtpc，带互动❤<br>
+        help = 帮助<br>
+        注意:字符数>70会停止输入
+        </p>
+    </div>
+    <div class="window" id="window8">
+        <div class="window_close" onclick="NoShowSettings()">
+            <p>×</p>
+        </div>
+        <div class="window_max" onclick="windowMax6()">
+            <p>↔</p>
+        </div>
+        <iframe src="./Settings.html" class="iframe1" sandbox="allow-scripts 
+        allow-top-navigation-by-user-activation allow-same-origin"></iframe>
+    </div>
+    <div class="window" id="window9">
+        <div class="window_close" onclick="NoShowTpc()">
+            <p>×</p>
+        </div>
+        <div class="window_max" onclick="windowMax7()">
+            <p>↔</p>
+        </div>
+        <iframe src="./T-PageCode.html" class="iframe1" sandbox="allow-scripts 
+        allow-top-navigation-by-user-activation allow-same-origin"></iframe>
+    </div>
+    <div id="CrashIcon" ondblclick="window.location.href='./SystemStop.html';ErrorCode('G:/Desktop/Crash.ghpr Cause a Crash')">
+        <div id="ErrorIcon">
+            <p>×</p>
+        </div>
+        <p id="CrashText">Crash</p>
+    </div>
+    <div id="BrowserDiv" ondblclick="BrowserShow()">
+        <div id="BrowserIcon">
+        </div>
+        <p id="BrowserText">Ghtpcbrowser</p>
+    </div>
+    <script src="./Script/Desktop.js"></script>
+</body>
+</html>
