@@ -21,7 +21,7 @@
   "build": {
     "appId": "io.github.t-pagecode.ghvswebtpc-desktop",
     "productName": "Ghvswebtpc Desktop",
-    "artifactName": "${productName}-Setup-${version}.${ext}",
+    "artifactName": "Ghvswebtpc-Desktop-Setup-${version}.${ext}",
     "icon": "icon.ico",
     "win": {
       "target": "nsis"
