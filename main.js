@@ -1,7 +1,7 @@
-const { app, BrowserWindow } = require('electron')
-const { autoUpdater } = require('electron-updater');
-let mainWindow = null
-
+const { app, BrowserWindow } = require("electron")
+const { autoUpdater } = require("electron-updater");
+let mainWindow = null;
+autoUpdater.autoInstallOnAppQuit = false;
 function createWindow() {
   mainWindow = new BrowserWindow({
     width: 1280,
@@ -19,18 +19,19 @@ function createWindow() {
   mainWindow.loadFile("WebSystem/Load.html")
   mainWindow.removeMenu();
 
-  mainWindow.on('closed', () => {
+  mainWindow.on("closed",() => {
     mainWindow = null;
   })
 }
-
 app.whenReady().then(() => {
   createWindow();
   if (app.isPackaged) {
-    autoUpdater.checkForUpdatesAndNotify();
+    autoUpdater.on("update-downloaded",() => {
+      autoUpdater.quitAndInstall(false,true);
+    })
+    autoUpdater.checkForUpdates();
   }
 });
-
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') app.quit();
+app.on("window-all-closed",() => {
+  app.quit();
 })

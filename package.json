@@ -1,6 +1,6 @@
 {
   "name": "ghvswebtpc-desktop",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "author": {
     "name": "T-PageCode",
     "email": "cdt20260@outlook.com"
@@ -32,7 +32,14 @@
       "installerIcon": "icon.ico",
       "uninstallerIcon": "icon.ico",
       "uninstallDisplayName": "Ghvswebtpc Desktop"
-    }
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "T-PageCode",
+        "repo": "Ghvswebtpc-Desktop"
+      }
+    ]
   },
   "dependencies": {
     "electron-updater": "^6.8.9"
