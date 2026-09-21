@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ghvswebtpc Desktop - 把网页版系统变成应用程序</title>
+    <style>
+        body{
+            background: linear-gradient(180deg,rgb(200,200,255),rgb(150,255,255));
+            background-attachment: fixed;
+            user-select: none;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            font-weight: 200;
+        }
+        #main-text{
+            position: absolute;
+            top: 250px;
+            left: calc(50% - 160px);
+            transform: translate(-50%,-50%);
+            font-size: 50px;
+            width: 350px;
+        }
+        #main-text span{
+            background: linear-gradient(90deg,rgb(200,0,255),rgb(50,0,255));
+            color: transparent;
+            background-clip: text;
+        }
+        #main-logo{
+            position: absolute;
+            left: calc(50% + 160px);
+            top: 250px;
+            transform: translate(-50%,-50%);
+            height: 250px;
+            transition: filter 0.5s ease,
+            transform 0.5s ease;
+        }
+        #main-logo:hover{
+            transform: translate(-50%,-50%) scale(1.2);
+            filter: drop-shadow(0px 0px 50px rgb(150,0,255,0.6));
+        }
+        #main-logo:active{
+            transform: translate(-50%,-50%) scale(1.1);
+            filter: drop-shadow(0px 0px 50px rgb(150,0,255));
+        }
+        nav{
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 95%;
+            height: 60px;
+            background-color: white;
+            border-radius: 20px;
+        }
+        nav h1{
+            line-height: 60px;
+            margin-left: 10px;
+        }
+        #ghvswebtpc-desktop{
+            position: absolute;
+            top: 340px;
+            left: calc(50% - 215px);
+            transform: translate(-50%,-50%);
+            font-size: 25px;
+        }
+        #download-latest{
+            position: absolute;
+            top: 400px;
+            left: calc(50% - 240px);
+            transform: translate(-50%,-50%);
+            width: 190px;
+            height: 40px;
+            border-radius: 50px;
+            border: none;
+            background: linear-gradient(90deg,rgb(200,0,255),rgb(50,0,255));
+            color: white;
+            font-size: 18px;
+            transition: background-color 0.5s ease,
+            filter 0.5s ease;
+        }
+        #download-latest:hover{
+            filter: drop-shadow(0 10px 20px rgb(150,0,250));
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Ghvswebtpc Desktop</h1>
+    </nav>
+    <h1 id="main-text">把<span>网页版系统</span>变成<span>应用程序</span></h1>
+    <p id="ghvswebtpc-desktop">Ghvswebtpc Desktop</p>
+    <button id="download-latest" onclick="window.open('https://github.com/T-PageCode/Ghvswebtpc-Desktop/releases/download/v1.1.7/Ghvswebtpc-Desktop-Setup-1.1.7.exe','gh')">立即下载最新版</button>
+    <img id="main-logo" src="./SystemLogo.png">
+    <script>
+        document.querySelectorAll("img").forEach((fe) => {
+            fe.draggable = false;
+        })
+    </script>
+</body>
+</html>
