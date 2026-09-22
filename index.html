@@ -14,6 +14,20 @@
             padding: 0;
             font-weight: 200;
         }
+        ::-webkit-scrollbar{
+            width: 10px;
+            height: 10px;
+        }
+        ::-webkit-scrollbar-track{
+            background-color: rgb(255,255,255);
+        }
+        ::-webkit-scrollbar-thumb{
+            background-color: rgb(150,0,255);
+            border-radius: 20px;
+        }
+        ::-webkit-scrollbar-corner{
+            background-color: rgb(255,255,255);
+        }
         #main-text{
             position: absolute;
             top: 250px;
@@ -45,7 +59,7 @@
             filter: drop-shadow(0px 0px 50px rgb(150,0,255));
         }
         nav{
-            position: absolute;
+            position: fixed;
             top: 40px;
             left: 50%;
             transform: translate(-50%,-50%);
@@ -77,11 +91,153 @@
             background: linear-gradient(90deg,rgb(200,0,255),rgb(50,0,255));
             color: white;
             font-size: 18px;
-            transition: background-color 0.5s ease,
+            transition: transform 0.5s ease,
             filter 0.5s ease;
         }
         #download-latest:hover{
             filter: drop-shadow(0 10px 20px rgb(150,0,250));
+            transform: translate(-50%,-70%);
+        }
+        #more-version{
+            position: absolute;
+            top: 400px;
+            left: calc(50% - 50px);
+            transform: translate(-50%,-50%);
+            width: 150px;
+            height: 40px;
+            border-radius: 50px;
+            border: none;
+            background-color: white;
+            color: black;
+            font-size: 18px;
+            transition: background-color 0.5s ease;
+        }
+        #more-version:hover{
+            background-color: rgb(230,230,230);
+        }
+        #electron-info{
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            white-space: nowrap;
+            color: black;
+        }
+        #electron-description{
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 80%;
+        }
+        #ad-title{
+            position: absolute;
+            top: 170px;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            white-space: nowrap;
+            color: black;
+        }
+        #ad-info{
+            position: absolute;
+            top: 220px;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            white-space: nowrap;
+        }
+        #info{
+            position: absolute;
+            top: 610px;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 80%;
+            height: 250px;
+            background-color: white;
+            border-radius: 20px;
+            border: 3px solid transparent;
+            transition: border-color 0.5s ease;
+        }
+        #info:hover{
+            border-color: rgb(150,0,255);
+        }
+        #footer-download{
+            position: absolute;
+            top: 850px;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 70%;
+            height: 150px;
+            border-radius: 20px;
+            background: linear-gradient(90deg,rgb(150,0,255),rgb(255,0,255));
+            color: white;
+        }
+        #footer-download h1{
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            white-space: nowrap;
+        }
+        #footer-download button{
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 190px;
+            height: 40px;
+            border-radius: 50px;
+            border: none;
+            background-color: white;
+            color: blsck;
+            font-size: 18px;
+            transition: background-color 0.5s ease,
+            transform 0.5s ease,
+            filter 0.5s ease,
+            color 0.5s ease;
+        }
+        #footer-download button:hover{
+            background-color: rgb(255,150,255);
+            color: white;
+            filter: drop-shadow(0 10px 20px rgb(255,150,255));
+            transform: translate(-50%,-70%);
+        }
+        footer{
+            position: absolute;
+            bottom: -20px;
+            text-align: center;
+            width: 100%;
+            height: 230px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        footer h1{
+            margin-bottom: 10px;
+        }
+        footer a{
+            margin-top: 2.5px;
+            text-decoration: none;
+            color: black;
+            transition: color 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+        }
+        footer a:hover{
+            color: rgb(150,0,255);
+        }
+        footer p{
+            margin-top: 70px;
+        }
+        .right-a{
+            margin-right: 250px;
+        }
+        .left-a{
+            margin-left: 250px;
+            margin-top: -45px;
         }
     </style>
 </head>
@@ -92,10 +248,38 @@
     <h1 id="main-text">把<span>网页版系统</span>变成<span>应用程序</span></h1>
     <p id="ghvswebtpc-desktop">Ghvswebtpc Desktop</p>
     <button id="download-latest" onclick="window.open('https://github.com/T-PageCode/Ghvswebtpc-Desktop/releases/download/v1.1.7/Ghvswebtpc-Desktop-Setup-1.1.7.exe','gh')">立即下载最新版</button>
+    <button id="more-version" onclick="window.open('https://t-pagecode.github.io/Downloads/GhvswebtpcDesktop','tpc')">下载其他版本</button>
     <img id="main-logo" src="./SystemLogo.png">
+    <div id="info">
+        <h1 id="electron-info">通过Electron，让网页变成应用程序</h1>
+        <p id="electron-description">此应用程序使用Electron来实现打包应用程序，Electron是一个可以让网页变成应用程序的框架，安装Node JS后执行npm install electron或者package.json里写上Electron就可以安装了。</p>
+        <h1 id="ad-title">重要亮点：无广告</h1>
+        <p id="ad-info">拒绝广告，不加广告。此网页版系统无广告，可以放心使用。</p>
+    </div>
+    <div id="footer-download">
+        <h1>现在就立即下载Ghvswebtpc Desktop</h1>
+        <button onclick="window.open('https://github.com/T-PageCode/Ghvswebtpc-Desktop/releases/download/v1.1.7/Ghvswebtpc-Desktop-Setup-1.1.7.exe','gh')">立即下载</button>
+    </div>
+    <footer>
+        <h1>Ghvswebtpc Desktop</h1>
+        <a href="https://t-pagecode.github.io" class="right-a">T-PageCode主页</a>
+        <a href="https://t-pagecode.github.io/Ghvswebtpc" class="right-a">Ghvswebtpc网页版</a>
+        <a href="https://t-pagecode.github.io/Downloads" class="right-a">T-PageCode下载中心</a>
+        <a href="https://t-pagecode.github.io/T-CodeSystem" class="right-a">T-CodeSystem网页版</a>
+        <a href="https://github.com/T-PageCode/Ghvswebtpc-Desktop/issues/new" class="left-a">反馈</a>
+        <a href="https://github.com/T-PageCode" class="left-a">T-PageCode GitHub</a>
+        <p>&copy;2026 T-PageCode, Dev.<br>保留所有权利。</p>
+    </footer>
     <script>
-        document.querySelectorAll("img").forEach((fe) => {
-            fe.draggable = false;
+        document.querySelectorAll("img").forEach((imgfe) => {
+            imgfe.draggable = false;
+        })
+        document.addEventListener("contextmenu",(ctm) => {
+            ctm.preventDefault();
+        })
+        document.querySelectorAll("a").forEach((afe) => {
+            afe.draggable = false;
+            afe.target = "newpage";
         })
     </script>
 </body>
