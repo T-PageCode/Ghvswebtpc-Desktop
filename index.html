@@ -68,10 +68,12 @@
             transform: translate(-50%,-50%);
             width: 95%;
             height: 60px;
-            background-color: white;
+            background-color: rgb(255,255,255,0.3);
+            backdrop-filter: blur(5px);
             border-radius: 20px;
             display: flex;
             align-items: center;
+            z-index: 100;
         }
         nav h1{
             line-height: 60px;
@@ -259,7 +261,7 @@
     <nav>
         <h1>Ghvswebtpc Desktop</h1>
         <a href="#footer" class="nav-link">其他</a>
-        <a href="#main-text" class="nav-link">下载</a>
+        <a href="#" class="nav-link">下载</a>
     </nav>
     <h1 id="main-text">让<span>网页版系统</span>变成<span>应用程序</span></h1>
     <p id="ghvswebtpc-desktop">Ghvswebtpc Desktop</p>
