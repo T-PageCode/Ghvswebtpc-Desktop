@@ -1,7 +1,6 @@
 const { app, BrowserWindow } = require("electron")
 const { autoUpdater } = require("electron-updater");
 let mainWindow = null;
-autoUpdater.autoInstallOnAppQuit = true;
 function createWindow() {
   mainWindow = new BrowserWindow({
     width: 1280,
@@ -26,9 +25,6 @@ function createWindow() {
 app.whenReady().then(() => {
   createWindow();
   if (app.isPackaged) {
-    autoUpdater.on("update-downloaded",() => {
-      autoUpdater.quitAndInstall(false,true);
-    })
     autoUpdater.checkForUpdatesAndNotify();
   }
 });
