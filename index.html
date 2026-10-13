@@ -33,7 +33,7 @@
         }
         #main-text{
             position: absolute;
-            top: 250px;
+            top: 220px;
             left: calc(50% - 160px);
             transform: translate(-50%,-50%);
             font-size: 50px;
@@ -91,14 +91,14 @@
         }
         #ghvswebtpc-desktop{
             position: absolute;
-            top: 340px;
+            top: 320px;
             left: calc(50% - 215px);
             transform: translate(-50%,-50%);
             font-size: 25px;
         }
         #download-latest{
             position: absolute;
-            top: 400px;
+            top: 380px;
             left: calc(50% - 240px);
             transform: translate(-50%,-50%);
             width: 190px;
@@ -117,7 +117,7 @@
         }
         #more-version{
             position: absolute;
-            top: 400px;
+            top: 380px;
             left: calc(50% - 50px);
             transform: translate(-50%,-50%);
             width: 150px;
@@ -175,7 +175,7 @@
             border-radius: 50px;
             border: none;
             background-color: white;
-            color: blsck;
+            color: black;
             font-size: 18px;
             transition: background-color 0.5s ease,
             transform 0.5s ease,
@@ -255,6 +255,29 @@
         .info p{
             margin-top: 5px;
         }
+        #version{
+            position: absolute;
+            top: 50%;
+            left: calc(50% + 70px);
+            transform: translate(-50%,-50%);
+            font-size: 20px;
+            background-color: white;
+            width: 180px;
+            text-align: right;
+            padding-right: 10px;
+            border-radius: 40px;
+        }
+        #version::before{
+            position: absolute;
+            top: 50%;
+            left: 17px;
+            transform: translate(-50%,-50%);
+            width: 15px;
+            height: 15px;
+            background-color: rgb(150,0,255);
+            content: "";
+            border-radius: 20px;
+        }
     </style>
 </head>
 <body>
@@ -262,10 +285,11 @@
         <h1>Ghvswebtpc Desktop</h1>
         <a href="#footer" class="nav-link">其他</a>
         <a href="#" class="nav-link">下载</a>
+        <div id="version">最新版本：v1.2.0</div>
     </nav>
     <h1 id="main-text">让<span>网页版系统</span>变成<span>应用程序</span></h1>
     <p id="ghvswebtpc-desktop">Ghvswebtpc Desktop</p>
-    <button id="download-latest" onclick="window.open('https://github.com/T-PageCode/Ghvswebtpc-Desktop/releases/download/v1.1.9/Ghvswebtpc-Desktop-Setup-1.2.0.exe','gh')">立即下载最新版</button>
+    <button id="download-latest" onclick="window.open('https://github.com/T-PageCode/Ghvswebtpc-Desktop/releases/download/v1.2.0/Ghvswebtpc-Desktop-Setup-1.2.0.exe','gh')">立即下载最新版</button>
     <button id="more-version" onclick="window.open('https://t-pagecode.github.io/Downloads/GhvswebtpcDesktop','tpc')">下载其他版本</button>
     <img id="main-logo" src="./SystemLogo.png">
     <div id="intro">
